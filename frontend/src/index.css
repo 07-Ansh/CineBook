@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-scale-up {
+  animation: scaleUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-slide-left {
+  animation: slideLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-slide-right {
+  animation: slideRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media print {
+  /* Force browsers to print background colors and images exactly as shown */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all interactive page headers, footers, links and buttons */
+  header,
+  footer,
+  nav,
+  .print\:hidden,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Reset layout margins for printing */
+  body, 
+  main {
+    background-color: white !important;
+    background-image: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Center only the ticket detail container */
+  .print-ticket-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 2rem !important;
+  }
+}
