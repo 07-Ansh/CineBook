@@ -1,0 +1,48 @@
+# Environment variables — NEVER commit these!
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+backend/.env
+frontend/.env
+!.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Deployment & Private docs
+DEPLOYMENT.md
+deployment.md
+DEPLOYMENT*.md
+deployment*.md
+.firebase/
+.vercel/
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
